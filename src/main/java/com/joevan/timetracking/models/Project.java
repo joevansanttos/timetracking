@@ -23,6 +23,18 @@ public class Project {
     @OneToMany (mappedBy = "project")
     private Set<Task> tasks = new HashSet<>();
 
+    public Project(){
+
+    }
+
+    public Project(String projectKey, String name, String startDate, String endDate) {
+        this.projectKey = projectKey;
+        this.name = name;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.status = Status.Open;
+    }
+
     public Long getId() {
         return id;
     }

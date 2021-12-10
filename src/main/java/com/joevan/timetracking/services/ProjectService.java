@@ -11,7 +11,6 @@ import java.util.UUID;
 
 @Service
 @Transactional
-
 public class ProjectService {
 
     private ProjectRepository projectRepository;
@@ -24,6 +23,10 @@ public class ProjectService {
 
     public List<Project> findAllProjects() {
         return projectRepository.findAll();
+    }
+
+    public Project addProject(Project project){
+        return projectRepository.save(project);
     }
 
 }
