@@ -18,11 +18,9 @@ public class Appointment {
     private AppointmentCategory appointmentCategory;
 
     @ManyToOne
-    @JoinColumn(name = "task_id")
     private Task task;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
     private User user;
 
     public Long getId() {

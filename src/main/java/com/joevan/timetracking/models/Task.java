@@ -30,6 +30,18 @@ public class Task {
     @OneToMany (mappedBy = "task")
     private Set<Appointment> appointments = new HashSet<>();
 
+    public Task(){
+
+    }
+
+    public Task(String subject, String startDate, String endDate, Project project, User user) {
+        this.subject = subject;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.project = project;
+        this.user = user;
+        this.status = Status.Open;
+    }
 
     public Long getId() {
         return id;
